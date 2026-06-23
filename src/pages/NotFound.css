@@ -1,0 +1,42 @@
+.not-found {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found__card {
+  width: min(100%, 460px);
+  text-align: center;
+}
+
+.not-found__code {
+  margin: 0 0 var(--spacing-xs);
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.not-found__title {
+  margin: 0 0 var(--spacing-sm);
+  font-size: var(--font-size-xl);
+}
+
+.not-found__text {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.not-found__actions {
+  margin-top: var(--spacing-lg);
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+}
+
+@media (max-width: 420px) {
+  .not-found__actions {
+    flex-direction: column;
+  }
+}

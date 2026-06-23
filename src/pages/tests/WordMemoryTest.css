@@ -1,0 +1,179 @@
+/* Word Memory Test Specific Styles */
+
+/* Wait Screen */
+.wait-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-2xl);
+  gap: var(--spacing-lg);
+}
+
+.wait-icon {
+  font-size: 48px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.wait-hint {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin: 0;
+}
+
+.timer-circle--wait {
+  background: conic-gradient(
+    var(--color-accent) calc(var(--progress, 0) * 360deg),
+    var(--color-bg-tertiary) 0deg
+  );
+}
+
+/* Selection Header */
+.selection-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.selection-header h2 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 var(--spacing-sm);
+}
+
+.selection-count {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.selection-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* Word Selection Grid */
+.word-selection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.word-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background-color: var(--color-bg-secondary);
+  border: 2px solid var(--color-bg-tertiary);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-height: var(--touch-target-min);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.word-option__checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border: 2px solid var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: bold;
+  color: transparent;
+  transition: all var(--transition-fast);
+}
+
+.word-option.selected .word-option__checkbox {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.word-option__text {
+  /* flex: 1; */
+}
+
+.word-option:hover {
+  border-color: var(--color-primary-light);
+  background-color: var(--color-primary-light);
+}
+
+.word-option.selected {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.word-option__check {
+  display: none;
+}
+
+/* Result Words */
+.test-result__words {
+  width: 100%;
+}
+
+.test-result__words h3 {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 var(--spacing-md);
+}
+
+.shown-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.shown-word {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.shown-word.correct {
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.shown-word.missed {
+  background-color: var(--color-error-light);
+  color: var(--color-error);
+}
+
+/* Tablet & Desktop */
+@media (min-width: 640px) {
+  .word-selection {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    margin: 0 auto var(--spacing-xl);
+  }
+
+  .word-option {
+    padding: var(--spacing-lg) var(--spacing-xl);
+    font-size: var(--font-size-lg);
+  }
+
+  .selection-header h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  .shown-words {
+    justify-content: center;
+  }
+}

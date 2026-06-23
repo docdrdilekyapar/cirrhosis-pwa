@@ -1,0 +1,110 @@
+/* Install Prompt Styles */
+.install-prompt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+    color: var(--color-text-inverse);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-md);
+    animation: slideUp var(--transition-normal) ease-out;
+}
+
+.install-prompt__content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex: 1;
+}
+
+.install-prompt__icon {
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.install-prompt__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: var(--font-size-sm);
+}
+
+.install-prompt__text strong {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+}
+
+.install-prompt__text span {
+    opacity: 0.9;
+    font-size: var(--font-size-xs);
+}
+
+.install-prompt__share-icon {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.install-prompt__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-shrink: 0;
+}
+
+.install-prompt__button {
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: var(--color-bg-secondary);
+    color: var(--color-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.install-prompt__button:hover {
+    background-color: var(--color-bg-primary);
+    transform: scale(1.02);
+}
+
+.install-prompt__dismiss {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--color-text-inverse);
+    font-size: 14px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.install-prompt__dismiss:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile specific styling */
+@media (max-width: 480px) {
+    .install-prompt {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--spacing-sm);
+    }
+
+    .install-prompt__actions {
+        justify-content: flex-end;
+    }
+
+    .install-prompt__button {
+        flex: 1;
+        padding: var(--spacing-sm);
+    }
+}

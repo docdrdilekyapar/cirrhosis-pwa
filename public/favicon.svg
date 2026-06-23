@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="url(#gradient)" />
+  
+  <!-- Brain outline -->
+  <path d="M50 20c-8 0-15 3-20 8-3 3-5 7-5 12 0 4 1 7 3 10-2 2-3 5-3 8 0 4 2 8 5 10 0 5 2 9 5 12 4 4 10 6 15 6s11-2 15-6c3-3 5-7 5-12 3-2 5-6 5-10 0-3-1-6-3-8 2-3 3-6 3-10 0-5-2-9-5-12-5-5-12-8-20-8z" 
+        fill="white" fill-opacity="0.9"/>
+  
+  <!-- Brain center line -->
+  <path d="M50 25v50" stroke="url(#gradient)" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Left brain curves -->
+  <path d="M48 30c-6 1-11 5-13 10M30 50c3 5 8 8 15 9M35 65c4 4 9 6 13 6" 
+        stroke="url(#gradient)" stroke-width="2" stroke-linecap="round" fill="none"/>
+  
+  <!-- Right brain curves -->
+  <path d="M52 30c6 1 11 5 13 10M70 50c-3 5-8 8-15 9M65 65c-4 4-9 6-13 6" 
+        stroke="url(#gradient)" stroke-width="2" stroke-linecap="round" fill="none"/>
+  
+  <!-- Pulse line -->
+  <path d="M15 50h15l5-10 5 20 5-15 5 10h35" 
+        stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.8"/>
+  
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+</svg>

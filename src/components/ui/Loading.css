@@ -1,0 +1,239 @@
+/* ============================================
+   Loading Component Styles
+   PWA Standartlarına Uygun:
+   - Hafif animasyonlar
+   - Yüksek kontrast
+   - Erişilebilirlik
+   - Sade tasarım
+   ============================================ */
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  min-height: 200px;
+}
+
+.loading--fullscreen {
+  position: fixed;
+  inset: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--color-bg-primary);
+  z-index: var(--z-modal);
+}
+
+.loading__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  text-align: center;
+}
+
+/* Size Variants */
+.loading__content--sm {
+  gap: var(--spacing-sm);
+}
+
+.loading__content--sm .loading__spinner-container {
+  width: 40px;
+  height: 40px;
+}
+
+.loading__content--sm .loading__message {
+  font-size: var(--font-size-sm);
+}
+
+.loading__content--md .loading__spinner-container {
+  width: 56px;
+  height: 56px;
+}
+
+.loading__content--lg {
+  gap: var(--spacing-xl);
+}
+
+.loading__content--lg .loading__spinner-container {
+  width: 72px;
+  height: 72px;
+}
+
+.loading__content--lg .loading__message {
+  font-size: var(--font-size-xl);
+}
+
+/* Spinner Container */
+.loading__spinner-container {
+  position: relative;
+  width: 56px;
+  height: 56px;
+}
+
+/* SVG Spinner */
+.loading__spinner {
+  width: 100%;
+  height: 100%;
+  animation: loading-rotate 1.5s linear infinite;
+}
+
+.loading__spinner-track {
+  stroke: var(--color-primary-light);
+}
+
+.loading__spinner-progress {
+  stroke: var(--color-primary);
+  stroke-dasharray: 80, 200;
+  stroke-dashoffset: 0;
+  animation: loading-dash 1.5s ease-in-out infinite;
+}
+
+/* Pulse Effect */
+.loading__pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  transform: translate(-50%, -50%);
+  animation: loading-pulse 2s ease-in-out infinite;
+  opacity: 0.15;
+}
+
+/* Text Styles */
+.loading__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.loading__message {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin: 0;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.loading__subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Animated Dots */
+.loading__dots {
+  display: inline-flex;
+  margin-left: 2px;
+  gap: 0;
+}
+
+.loading__dot {
+  opacity: 0;
+  animation: loading-dot 1.4s infinite;
+}
+
+.loading__dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loading__dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading__dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Animations */
+@keyframes loading-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+@keyframes loading-pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes loading-dot {
+  0%, 20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .loading__spinner {
+    animation: none;
+  }
+  
+  .loading__spinner-progress {
+    animation: none;
+    stroke-dasharray: 60, 200;
+    stroke-dashoffset: -20px;
+  }
+  
+  .loading__pulse {
+    animation: none;
+    opacity: 0.1;
+  }
+  
+  .loading__dot {
+    animation: none;
+  }
+  
+  .loading__dot:nth-child(1),
+  .loading__dot:nth-child(2),
+  .loading__dot:nth-child(3) {
+    opacity: 1;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .loading__spinner-track {
+    stroke: var(--color-text-muted);
+  }
+  
+  .loading__spinner-progress {
+    stroke: var(--color-primary);
+    stroke-width: 5;
+  }
+  
+  .loading__message {
+    font-weight: 600;
+  }
+}

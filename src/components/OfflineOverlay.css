@@ -1,0 +1,68 @@
+.offline-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 1.5rem;
+}
+
+.offline-overlay__card {
+  background: var(--color-surface, #fff);
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.offline-overlay__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem;
+  color: var(--color-error, #e53e3e);
+}
+
+.offline-overlay__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-text, #1a1a1a);
+}
+
+.offline-overlay__message {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary, #666);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.offline-overlay__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background: var(--color-error-bg, #fff5f5);
+  color: var(--color-error, #e53e3e);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.offline-overlay__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: offline-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes offline-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}

@@ -1,0 +1,105 @@
+/* Color Match Test Specific Styles */
+
+.color-match-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 250px;
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.color-match-symbol {
+  font-size: 64px;
+  font-weight: 900;
+  font-family: monospace;
+  letter-spacing: 0.1em;
+  animation: scaleIn var(--transition-fast) forwards;
+}
+
+@media (min-width: 400px) {
+  .color-match-symbol {
+    font-size: 80px;
+  }
+}
+
+.color-match-feedback {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  animation: scaleIn var(--transition-fast) forwards;
+}
+
+.color-match-feedback--correct {
+  color: var(--color-success);
+}
+
+.color-match-feedback--wrong {
+  color: var(--color-error);
+}
+
+/* Color Buttons */
+.color-buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.color-button {
+  aspect-ratio: 1;
+  min-height: var(--touch-target-min);
+  border: 3px solid transparent;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.color-button:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.color-button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.color-button:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.color-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Specific color button borders for visibility */
+.color-button[style*="yellow"] {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Tablet & Desktop */
+@media (min-width: 640px) {
+  .color-match-area {
+    height: 300px;
+  }
+
+  .color-match-symbol {
+    font-size: 96px;
+  }
+
+  .color-buttons {
+    max-width: 500px;
+    margin: 0 auto var(--spacing-md);
+    gap: var(--spacing-lg);
+  }
+
+  .color-button {
+    min-height: 64px;
+  }
+}

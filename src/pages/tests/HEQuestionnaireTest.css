@@ -1,0 +1,106 @@
+.he-questionnaire__question-card {
+  margin-top: var(--spacing-sm);
+}
+
+.he-questionnaire__counter {
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.he-questionnaire__question {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
+  white-space: pre-line;
+}
+
+.he-questionnaire__answers {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.he-symptoms {
+  gap: var(--spacing-lg);
+}
+
+.he-symptoms__card {
+  width: 100%;
+}
+
+.he-symptoms__section {
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.he-symptoms__title {
+  margin: 0 0 var(--spacing-lg) 0;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
+}
+
+.he-symptoms__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.he-symptoms__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--color-bg-tertiary);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.he-symptoms__list li:last-child .he-symptoms__item {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.he-symptoms__list li:first-child .he-symptoms__item {
+  padding-top: 0;
+}
+
+.he-symptoms__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.he-symptoms__checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  margin-top: 2px;
+  border: 2px solid var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 700;
+  color: transparent;
+  transition: all var(--transition-fast);
+}
+
+.he-symptoms__item.selected .he-symptoms__checkbox {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.he-symptoms__label {
+  flex: 1;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
+}

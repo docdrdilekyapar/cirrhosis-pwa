@@ -1,0 +1,41 @@
+.PWABadge-toast {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  width: min(420px, calc(100vw - 24px));
+  padding: 12px;
+  border: 1px solid var(--color-bg-tertiary);
+  border-radius: 12px;
+  background: var(--color-bg-secondary);
+  box-shadow: var(--shadow-lg);
+  z-index: var(--z-toast);
+}
+
+.PWABadge-toast-message {
+  margin: 0 0 10px;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+.PWABadge-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.PWABadge-toast-button {
+  border: 1px solid var(--color-bg-tertiary);
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+}
+
+.PWABadge-toast-button.primary {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}

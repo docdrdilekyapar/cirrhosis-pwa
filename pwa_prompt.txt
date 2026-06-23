@@ -1,0 +1,80 @@
+Rolün:
+Kıdemli bir Frontend Architect ve UX Designer olarak davran.
+Sağlık alanında (özellikle siroz hastaları) için HETrackerler içeren bir PWA geliştireceksin.
+
+Teknoloji:
+- React
+- PWA (Service Worker, Offline Cache, IndexedDB)
+- Mobile-First tasarım
+- Touch-first etkileşimler
+
+Amaç:
+Siroz hastalarının dikkat, reaksiyon ve kısa süreli hafıza becerilerini ölçen bir mobil uyumlu PWA geliştirmek.
+
+Uygulama İçeriği – Testler:
+
+TEST 1 – Nokta Yakalama Testi:
+- Ekranda belirli bir alan içinde rastgele konumlarda tek bir nokta gösterilecek
+- Kullanıcıdan doğru noktaya dokunması istenecek
+- 15 tekrar olacak
+- Her testte:
+  - Doğru dokunma sayısı
+  - Yanlış dokunma sayısı
+  - Tepki süresi ölçülecek
+
+TEST 2 – Renk Eşleştirme Testi:
+- Ekranın ortasında "#####” ifadesi gösterilecek
+- Bu ifade şu renklerden rastgele biri olacak:
+  - Siyah
+  - Kırmızı
+  - Sarı
+  - Yeşil
+  - Mavi
+- Ekranın altında bu 5 rengin dokunulabilir butonları olacak
+- Kullanıcı doğru rengi seçmeye çalışacak
+- Toplam 15 tekrar olacak
+- Doğru / yanlış sayıları tutulacak
+
+TEST 3 – Kelime Hafıza Testi:
+- Ekranda kelime havuzundan rastgele seçilmiş 4 kelime gösterilecek
+- Toplam süre: 30 saniye
+- 20. saniyede kelimeler ekrandan kaybolacak
+- Son 10 saniyede hafif bir müzik çalacak
+- 30 saniye sonunda:
+  - Ekranda karışık kelimeler gösterilecek
+  - Kullanıcı daha önce gördüğü kelimeleri işaretleyecek
+
+Tasarım & UX Kuralları:
+- UI/UX ilkelerine birebir uy
+- 60 / 30 / 10 renk kuralını uygula
+- Kullanıcı odaklı tasarım (User-Centered Design)
+- Mobile-First yaklaşım
+- Basit, net ve sade arayüz
+- Dokunmatik etkileşimlere uygun büyük butonlar
+- Net görsel hiyerarşi ve okunabilir tipografi
+- Performans öncelikli tasarım
+- Offline ve zayıf ağ desteği
+- Tutarlı bileşen yapısı
+- Kullanıcıya anlık geri bildirimler (doğru / yanlış / süre)
+- Basit ve sezgisel navigasyon
+- Erişilebilirlik:
+  - Yüksek kontrast
+  - Büyük fontlar
+  - Screen reader uyumu
+- Güven ve şeffaflık:
+  - Test sonuçları açık ve anlaşılır gösterilmeli
+- Animasyon ve mikro etkileşimler:
+  - Hafif
+  - Dikkat dağıtmayacak şekilde
+
+Ek Gereksinimler:
+- Test sonuçları localde saklanmalı (IndexedDB / LocalStorage)
+- Offline çalışabilmeli
+- Performans skorları ve test geçmişi görüntülenebilmeli
+
+Çıktı Beklentisi:
+- Bileşen mimarisi
+- Ekran akışları
+- State yönetimi önerisi
+- UX kararlarının kısa açıklamaları
+
