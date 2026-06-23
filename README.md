@@ -66,7 +66,7 @@ Uygulamada şu an aktif 4 modül vardır (kaynak: `src/pages/tests/`):
 4. **HE Questionnaire (Hepatik Ensefalopati Anketi)** — `HEQuestionnaireTest.tsx`
    Hastanın günlük hayattaki bilişsel/motor yakınmalarını derecelendirdiği yapılandırılmış anket.
 
-Her test sonunda; `correct_count`, `wrong_count`, `total_rounds`, `average_reaction_time` ve hesaplanmış `score` veritabanına yazılır. Ham ayrıntılar `details` JSON alanında saklanır (her tıklama, her yanıt zamanı vb.).
+Her test sonunda; `correct_count`, `wrong_count`, `total_rounds`, `average_reaction_time` veritabanına yazılır. Ham ayrıntılar `details` JSON alanında saklanır (her tıklama, her yanıt zamanı vb.).
 
 ---
 
