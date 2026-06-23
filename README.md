@@ -73,11 +73,11 @@ Her test sonunda; `correct_count`, `wrong_count`, `total_rounds`, `average_react
 ## Hasta Akışı
 
 1. Hasta uygulamayı açar → **Aydınlatılmış Onam (Consent) Ekranı**'nı okur ve kabul eder.
-2. **Kayıt** olur (e-posta + ad, yaş, cinsiyet, telefon).
-3. **Ana Sayfa**'dan "Yeni Test Oturumu Başlat"a basar.
+2. **Ana Sayfa**'dan "Yeni Test Oturumu Başlat"a basar.
 4. 4 test sırasıyla uygulanır (her testin başında kısa talimat ekranı vardır).
 5. Test bittiğinde **Sonuç Sayfası**'nda kendi skorlarını görür.
 6. Araştırmacı, **Admin paneli** veya doğrudan Supabase üzerinden tüm hastaların verisini inceler.
+
 
 ---
 
@@ -276,11 +276,10 @@ ORDER BY p.id, t.started_at, tr.test_type;
 
 ## İletişim & Katkı
 
-- **Tez Sahibi:** _(buraya hekimin adı ve iletişimi eklenmelidir)_
-- **Danışman Öğretim Üyesi:** _(buraya eklenmelidir)_
-- **Geliştirici / Teknik Sorumlu:** _(buraya eklenmelidir)_
+- **Tez Sahibi:** Dilek YAPAR
+- **Danışman Öğretim Üyesi:** Prof. Dr. Ahmet YARDIMCI
 
-Hata bildirimi veya öneri için projenin Git deposunda **Issue** açabilirsiniz.
+
 
 ---
 
