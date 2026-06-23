@@ -44,11 +44,8 @@ Bu uygulama:
 | Katman | Teknoloji | Açıklama |
 |---|---|---|
 | Editör | **Cursor** | Geliştirme/IDE ortamı (AI destekli VS Code tabanlı editör) |
-| Arayüz (Frontend) | **React 19 + TypeScript** | Modern, bileşen tabanlı kullanıcı arayüzü |
-| Derleme Aracı | **Vite 7** | Hızlı geliştirme ve üretim derlemesi |
-| PWA | **vite-plugin-pwa + Workbox** | Telefona yüklenebilir, çevrimdışı çalışan uygulama |
-| Çevrimdışı Depolama | **IndexedDB (idb)** | İnternet yokken testlerin lokalde tutulması |
-| Yönlendirme | **react-router 7** | Sayfa geçişleri |
+| Arayüz (Frontend) | **React 19 + TypeScript** | Modern, bileşen tabanlı kullanıcı arayüzü | 
+| PWA | **vite-plugin-pwa + Workbox** | Telefona yüklenebilir, çevrimdışı çalışan uygulama |  
 | Veritabanı & Auth | **Supabase** (PostgreSQL) | Kullanıcı kimliği, RLS ile güvenli veri saklama |
 
 ---
